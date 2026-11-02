@@ -1,0 +1,46 @@
+{
+  "id": "rectoverso-capitals",
+  "version": "0.1.0-rc.1",
+  "status": "local-review-candidate",
+  "title": {
+    "en": "Capitals",
+    "fr": "Capitales"
+  },
+  "subject": {
+    "en": "Geography",
+    "fr": "Géographie"
+  },
+  "license": "CC-BY-4.0",
+  "proOnly": false,
+  "identityBase": 1867200400,
+  "guidPrefix": "rv-capitals",
+  "roster": "iso-3166-1-249-applicable-v1",
+  "cards": 488,
+  "sounds": 0,
+  "pictures": 0,
+  "imageCredits": [],
+  "sourceFiles": {
+    "pictures": "source/media",
+    "places": "source/places.json"
+  },
+  "releaseTag": "v0.1.0-rc.1",
+  "languages": {
+    "en": {
+      "id": "rectoverso-capitals-en",
+      "title": "Capitals",
+      "cards": 488,
+      "package": {
+        "file": "Capitals-en-488.apkg"
+      }
+    },
+    "fr": {
+      "id": "rectoverso-capitals-fr",
+      "title": "Capitales",
+      "cards": 488,
+      "package": {
+        "file": "Capitales-fr-488.apkg"
+      }
+    }
+  },
+  "contentModifiedAt": "2026-11-01T22:57:00Z"
+}

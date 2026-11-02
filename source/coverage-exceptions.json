@@ -1,0 +1,77 @@
+{
+  "v": 1,
+  "referenceEntries": 249,
+  "regionalQuestions": "39 additional Maps-only questions are not added to this deck.",
+  "exceptions": [
+    {
+      "code": "ATA",
+      "kind": "capital",
+      "reason": "No national capital."
+    },
+    {
+      "code": "ATF",
+      "kind": "capital",
+      "reason": "Administration is outside this territory; bases are not a capital."
+    },
+    {
+      "code": "BES",
+      "kind": "capital",
+      "reason": "Three separate public bodies; no single capital for this ISO aggregate."
+    },
+    {
+      "code": "BVT",
+      "kind": "capital",
+      "reason": "Uninhabited; administered from outside the territory."
+    },
+    {
+      "code": "ESH",
+      "kind": "capital",
+      "reason": "Held: competing claimed capital and administrative centres need a reviewed status-qualified record."
+    },
+    {
+      "code": "GIB",
+      "kind": "capital",
+      "reason": "PCGN 2026 explicitly identifies no separate capital or administrative centre."
+    },
+    {
+      "code": "HKG",
+      "kind": "capital",
+      "reason": "No separate capital for the city territory."
+    },
+    {
+      "code": "HMD",
+      "kind": "capital",
+      "reason": "Uninhabited; administered from outside the territory."
+    },
+    {
+      "code": "IOT",
+      "kind": "capital",
+      "reason": "No permanent civilian capital."
+    },
+    {
+      "code": "MAC",
+      "kind": "capital",
+      "reason": "No separate capital for the city territory."
+    },
+    {
+      "code": "SGS",
+      "kind": "capital",
+      "reason": "No capital; scientific stations are not capitals."
+    },
+    {
+      "code": "SJM",
+      "kind": "capital",
+      "reason": "Statistical aggregate; Longyearbyen serves Svalbard, not Jan Mayen."
+    },
+    {
+      "code": "TKL",
+      "kind": "capital",
+      "reason": "No single capital; administration rotates among atolls."
+    },
+    {
+      "code": "UMI",
+      "kind": "capital",
+      "reason": "Statistical aggregate; no single capital."
+    }
+  ]
+}
