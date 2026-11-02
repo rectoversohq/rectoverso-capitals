@@ -4,11 +4,22 @@ Relier les lieux à leurs capitales, dans les deux sens.
 
 [English](README.md) · [Périmètre et sources](docs/coverage.md) · [Construction et mises à jour](docs/build.md)
 
-**Candidat local pour revue — non publié.** Aucun téléchargement n’est encore publié.
+**Sources candidates pour revue — aucun paquet publié.** Les sources sont disponibles sur cette branche de revue.
 
 Une source commune produit **488 cartes en français** et **488 en anglais**, dans deux paquets indépendants. Le référentiel comporte 249 pays et territoires ISO ; seules les questions pertinentes sont incluses. Les exclusions sont documentées, sans capitale inventée.
 
 Les rôles des capitales et des sièges du gouvernement sont précisés. Les champs continent et région facilitent la recherche. Dans Anki, **Explorer** ouvre une courte note après la réponse. La compatibilité native RectoVerso reste une vérification distincte.
+
+## Obtenir les sources
+
+La branche principale est une page d’accueil jusqu’à la fusion de la pull request. Cloner la branche de revue pour disposer du générateur :
+
+```sh
+git clone --branch codex/1-source-candidate https://github.com/rectoversohq/rectoverso-capitals.git
+cd rectoverso-capitals
+```
+
+La [revue des sources](docs/review.md) précise l’état des contrôles et les étapes restantes.
 
 ## Construire pour Anki
 

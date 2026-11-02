@@ -4,7 +4,7 @@ Connect places and their capitals, in both directions.
 
 [Français](README.fr.md) · [Coverage and sources](docs/coverage.md) · [Build and update](docs/build.md)
 
-**Local review candidate — not released.** No download is published yet.
+**Source review candidate — not released.** Sources are available on this review branch; no package release is published.
 
 | | |
 |---|---|
@@ -16,6 +16,17 @@ Connect places and their capitals, in both directions.
 | License | CC BY 4.0, with original asset licenses retained |
 
 Capital and government-seat roles stay explicit. Continent and region fields support discovery without cluttering the question. In Anki, **Explore** opens a short answer note. In RectoVerso, compatible importers expose that note after confirmation; app import and native visual review remain separate checks.
+
+## Get the source
+
+The complete candidate is reviewed in [source issue #1](https://github.com/rectoversohq/rectoverso-capitals/issues/1). The default branch is a landing page until the source PR is merged. Clone the review branch to run the commands below:
+
+```sh
+git clone --branch codex/1-source-candidate https://github.com/rectoversohq/rectoverso-capitals.git
+cd rectoverso-capitals
+```
+
+See [source review and validation status](docs/review.md).
 
 ## Build for Anki
 
