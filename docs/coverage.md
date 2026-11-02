@@ -74,3 +74,7 @@ This is a named discovery-classification choice, not uncertainty about where the
 Owner decision, 2 November 2026: retain the explicitly named GeoNames Antarctic group while preserving ATF’s African Scattered Islands separately. Its Kerguelen, Crozet and Amsterdam/Saint-Paul groups use AN; Glorioso, Juan de Nova, Europa, Bassas da India and Tromelin use AF. There is no automatic Antarctica membership for Australia, New Zealand, South Africa or Saint Helena merely because an Antarctic program operates on an island. This wording does not say the named islands are on the Antarctic continental landmass.
 
 The owner approved these existing candidate assignments, so this decision changes no package content, card count, artwork or boundary. The exact decision and source comparison remain under `taxonomyReview` in the continent JSON. This geographic classification is settled; publication gates are tracked separately.
+
+## Owner feedback and context labels
+
+Answer context exposes **Continent** and **Region** as separately named fields in English and French. Region preserves the existing source classification; it is not relabeled as a continent or subcontinent. Multiple continent memberships and bilingual search aliases are unchanged. The old **Details** field keeps only the remaining optional note, if any.

@@ -17,6 +17,8 @@ Connect places and their capitals, in both directions.
 
 Capital and government-seat roles stay explicit. Continent and region fields support discovery without cluttering the question. In Anki, **Explore** opens a short answer note. In RectoVerso, compatible importers expose that note after confirmation; app import and native visual review remain separate checks.
 
+Answer context uses separately labeled **Continent** and **Region** fields. See [owner feedback and update semantics](docs/coverage.md#owner-feedback-and-context-labels).
+
 ## Get the source
 
 The complete candidate is reviewed in [source issue #1](https://github.com/rectoversohq/rectoverso-capitals/issues/1). The default branch is a landing page until the source PR is merged. Clone the review branch to run the commands below:

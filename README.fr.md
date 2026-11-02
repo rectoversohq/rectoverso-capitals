@@ -10,6 +10,8 @@ Une source commune produit **488 cartes en français** et **488 en anglais**, da
 
 Les rôles des capitales et des sièges du gouvernement sont précisés. Les champs continent et région facilitent la recherche. Dans Anki, **Explorer** ouvre une courte note après la réponse. La compatibilité native RectoVerso reste une vérification distincte.
 
+Le contexte de la réponse distingue **Continent** et **Région**. Les identités existantes sont conservées ; les retraits de questions et les limites de mise à jour sont décrits dans la [couverture](docs/coverage.md#owner-feedback-and-context-labels).
+
 ## Obtenir les sources
 
 La branche principale est une page d’accueil jusqu’à la fusion de la pull request. Cloner la branche de revue pour disposer du générateur :
