@@ -21,6 +21,10 @@ python scripts/build.py --language fr --out /outside/repo/Capitales-fr-488.apkg
 | `scripts/` | Builder and CI |
 | `scripts/checks/`, `tests/` | Source, Anki round-trip and reproducibility checks |
 
+## Gallery metadata
+
+RectoVerso's gallery reads this deck from `rectoverso.json` and each package's `.rectoverso.json` sidecar, attached to the release with the release's `SHA256SUMS` (the contract: [RectoVerso #690](https://github.com/simonpinkas/RectoVerso/issues/690)). Beside the identity and version: the headline and description in each language, the categories, the creator, the license, the upstream sources, and under each language its `sample`, the GUID of the card the gallery opens as the deck's sample question. A sample is one of that language's cards and shows alone with all its pictures; `scripts/checks/verify-source.py` checks it.
+
 ## Updating a published deck
 
 1. Branch in this deck repository and attach the PR to a source issue.
