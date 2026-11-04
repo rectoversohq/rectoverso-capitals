@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-11-04 — Gallery copy
+
+The owner approved the gallery copy: the headline and description in `rectoverso.json`, with "Where a place has more than one capital" / « Quand un lieu a plusieurs capitales » rather than "a country", so the description takes no position on a place's status.
+
 ## 2026-11-02 — Owner phone feedback
 
 Answer context now exposes **Continent** and **Region** as separate English/French resources. Existing continent memberships and search aliases are unchanged. The new Region field is appended; existing deck/model/template/field identities remain intact.

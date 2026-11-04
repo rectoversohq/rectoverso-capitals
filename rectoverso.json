@@ -15,8 +15,8 @@
     "fr": "Chaque capitale, et le lieu auquel elle appartient."
   },
   "description": {
-    "en": "The capitals of the world's countries and territories, in both directions: from a place to its capital, from a capital to its place. Where a country has more than one capital, each is named with its role, such as constitutional capital or seat of government.",
-    "fr": "Les capitales des pays et territoires du monde, dans les deux sens : d’un lieu à sa capitale, d’une capitale à son lieu. Quand un pays a plusieurs capitales, chacune est nommée avec son rôle, comme capitale constitutionnelle ou siège du gouvernement."
+    "en": "The capitals of the world's countries and territories, in both directions: from a place to its capital, from a capital to its place. Where a place has more than one capital, each is named with its role, such as constitutional capital or seat of government.",
+    "fr": "Les capitales des pays et territoires du monde, dans les deux sens : d’un lieu à sa capitale, d’une capitale à son lieu. Quand un lieu a plusieurs capitales, chacune est nommée avec son rôle, comme capitale constitutionnelle ou siège du gouvernement."
   },
   "categories": [
     "geography"
