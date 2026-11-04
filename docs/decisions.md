@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-11-04 — Publication preparation for 0.1.0-rc.2
+
+The owner asked for this preparation before releasing 0.1.0-rc.2. The Anki deck description, which still read “Local review candidate; not published”, now describes the published deck in English and French, with its license and where its credits and sources are. The READMEs, NOTICE and review page point to 0.1.0-rc.2, and the update guide names 0.1.0-rc.1 as the published predecessor to test from. Cards, notes, identities and pictures are unchanged; `contentModifiedAt` stays, since no card changed.
+
 ## 2026-11-04 — Gallery copy
 
 The owner approved the gallery copy: the headline and description in `rectoverso.json`, with "Where a place has more than one capital" / « Quand un lieu a plusieurs capitales » rather than "a country", so the description takes no position on a place's status.

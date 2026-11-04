@@ -4,7 +4,7 @@ Relier les lieux à leurs capitales, dans les deux sens.
 
 [English](README.md) · [Périmètre et sources](docs/coverage.md) · [Construction et mises à jour](docs/build.md)
 
-**Préversion 0.1.0-rc.1.** [Télécharger les paquets Anki français et anglais](https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.1).
+**Préversion 0.1.0-rc.2.** [Télécharger les paquets Anki français et anglais](https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.2).
 
 Une source commune produit **488 cartes en français** et **488 en anglais**, dans deux paquets indépendants. Le référentiel comporte 249 pays et territoires ISO ; seules les questions pertinentes sont incluses. Les exclusions sont documentées, sans capitale inventée.
 
@@ -17,7 +17,7 @@ Le contexte de la réponse distingue **Continent** et **Région**. Les identité
 Cloner les sources étiquetées pour reproduire cette préversion :
 
 ```sh
-git clone --branch v0.1.0-rc.1 https://github.com/rectoversohq/rectoverso-capitals.git
+git clone --branch v0.1.0-rc.2 https://github.com/rectoversohq/rectoverso-capitals.git
 cd rectoverso-capitals
 ```
 
