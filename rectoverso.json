@@ -1,6 +1,6 @@
 {
   "id": "rectoverso-capitals",
-  "version": "0.1.0-rc.2",
+  "version": "0.1.0-rc.3",
   "status": "prerelease",
   "title": {
     "en": "Capitals",
@@ -49,7 +49,7 @@
     "pictures": "source/media",
     "places": "source/places.json"
   },
-  "releaseTag": "v0.1.0-rc.2",
+  "releaseTag": "v0.1.0-rc.3",
   "languages": {
     "en": {
       "id": "rectoverso-capitals-en",
@@ -70,10 +70,10 @@
       "sample": "rv-capitals-fr-aus-place-capital-canberra"
     }
   },
-  "contentModifiedAt": "2026-11-05T10:22:00Z",
+  "contentModifiedAt": "2026-11-05T10:23:00Z",
   "publication": {
     "remote": "https://github.com/rectoversohq/rectoverso-capitals",
-    "release": "https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.2",
+    "release": "https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.3",
     "approved": true,
     "visibility": "public"
   }

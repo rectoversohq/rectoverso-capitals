@@ -4,7 +4,7 @@ Connect places and their capitals, in both directions.
 
 [Français](README.fr.md) · [Coverage and sources](docs/coverage.md) · [Build and update](docs/build.md)
 
-**Prerelease 0.1.0-rc.2.** [Download the English/French Anki packages](https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.2).
+**Prerelease 0.1.0-rc.3.** [Download the English/French Anki packages](https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.3).
 
 | | |
 |---|---|
@@ -24,7 +24,7 @@ Answer context uses separately labeled **Continent** and **Region** fields. See 
 The complete candidate is reviewed in [source issue #1](https://github.com/rectoversohq/rectoverso-capitals/issues/1). Clone the tagged source to reproduce this prerelease:
 
 ```sh
-git clone --branch v0.1.0-rc.2 https://github.com/rectoversohq/rectoverso-capitals.git
+git clone --branch v0.1.0-rc.3 https://github.com/rectoversohq/rectoverso-capitals.git
 cd rectoverso-capitals
 ```
 
