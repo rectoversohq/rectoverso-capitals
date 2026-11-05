@@ -8,4 +8,4 @@ New authored deck content © Simon Pinkas. Licensed under Creative Commons Attri
 - Capital and administrative-seat facts are checked against dated primary geographic and government references linked on each record. The attribution is not an endorsement by those institutions.
 - The build uses the separately installed Anki backend (AGPL); no Anki program binary is redistributed inside the deck.
 
-The candidate has not been published. Attribution does not imply endorsement by the referenced institutions.
+Its packages are published as [prereleases](https://github.com/rectoversohq/rectoverso-capitals/releases). Attribution does not imply endorsement by the referenced institutions.

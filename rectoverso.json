@@ -1,6 +1,6 @@
 {
   "id": "rectoverso-capitals",
-  "version": "0.1.0-rc.1",
+  "version": "0.1.0-rc.2",
   "status": "prerelease",
   "title": {
     "en": "Capitals",
@@ -10,7 +10,33 @@
     "en": "Geography",
     "fr": "Géographie"
   },
+  "headline": {
+    "en": "Every capital, and the place it belongs to.",
+    "fr": "Chaque capitale, et le lieu auquel elle appartient."
+  },
+  "description": {
+    "en": "The capitals of the world's countries and territories, in both directions: from a place to its capital, from a capital to its place. Where a place has more than one capital, each is named with its role, such as constitutional capital or seat of government.",
+    "fr": "Les capitales des pays et territoires du monde, dans les deux sens : d’un lieu à sa capitale, d’une capitale à son lieu. Quand un lieu a plusieurs capitales, chacune est nommée avec son rôle, comme capitale constitutionnelle ou siège du gouvernement."
+  },
+  "categories": [
+    "geography"
+  ],
   "license": "CC-BY-4.0",
+  "creator": "Simon Pinkas",
+  "sources": [
+    {
+      "name": "Ultimate Geography",
+      "version": "5.3",
+      "license": "Unlicense (text only)",
+      "url": "https://github.com/anki-geo/ultimate-geography/blob/v5.3/LICENSE.md"
+    },
+    {
+      "name": "RectoVerso Maps",
+      "version": "0.3.0-rc.1",
+      "license": "CC-BY-4.0",
+      "url": "https://github.com/rectoversohq/rectoverso-maps/tree/v0.3.0-rc.1"
+    }
+  ],
   "proOnly": false,
   "identityBase": 1867200400,
   "guidPrefix": "rv-capitals",
@@ -23,7 +49,7 @@
     "pictures": "source/media",
     "places": "source/places.json"
   },
-  "releaseTag": "v0.1.0-rc.1",
+  "releaseTag": "v0.1.0-rc.2",
   "languages": {
     "en": {
       "id": "rectoverso-capitals-en",
@@ -31,7 +57,8 @@
       "cards": 488,
       "package": {
         "file": "Capitals-en-488.apkg"
-      }
+      },
+      "sample": "rv-capitals-en-aus-place-capital-canberra"
     },
     "fr": {
       "id": "rectoverso-capitals-fr",
@@ -39,13 +66,14 @@
       "cards": 488,
       "package": {
         "file": "Capitales-fr-488.apkg"
-      }
+      },
+      "sample": "rv-capitals-fr-aus-place-capital-canberra"
     }
   },
-  "contentModifiedAt": "2026-11-02T13:44:58Z",
+  "contentModifiedAt": "2026-11-05T07:03:46Z",
   "publication": {
     "remote": "https://github.com/rectoversohq/rectoverso-capitals",
-    "release": "https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.1",
+    "release": "https://github.com/rectoversohq/rectoverso-capitals/releases/tag/v0.1.0-rc.2",
     "approved": true,
     "visibility": "public"
   }

@@ -28,5 +28,5 @@
     "map-flag": "Carte → drapeau",
     "flag-map": "Drapeau → carte"
   },
-  "description": "Un jeu de géographie issu de sources bilingues. Candidat local pour revue ; non publié."
+  "description": "Les capitales des pays et territoires du monde, dans les deux sens : d’un lieu à sa capitale, d’une capitale à son lieu. Quand un lieu a plusieurs capitales, chacune est nommée avec son rôle, comme capitale constitutionnelle ou siège du gouvernement. Deck © Simon Pinkas, CC BY 4.0. Crédits et sources : https://github.com/rectoversohq/rectoverso-capitals"
 }

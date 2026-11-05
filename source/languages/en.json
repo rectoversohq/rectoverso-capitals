@@ -28,5 +28,5 @@
     "map-flag": "Map → flag",
     "flag-map": "Flag → map"
   },
-  "description": "A bilingual-source geography deck. Local review candidate; not published."
+  "description": "The capitals of the world's countries and territories, in both directions: from a place to its capital, from a capital to its place. Where a place has more than one capital, each is named with its role, such as constitutional capital or seat of government. Deck © Simon Pinkas, CC BY 4.0. Credits and sources: https://github.com/rectoversohq/rectoverso-capitals"
 }
