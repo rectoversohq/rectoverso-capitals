@@ -32,7 +32,7 @@ See [source review and validation status](docs/review.md).
 
 ## Build for Anki
 
-Use Python 3.14 and the pinned Anki backend. No account, API key or paid service is needed. This text-only deck builds directly from its tracked JSON records; no drawing tool or image download is needed.
+Use Python 3.14 and the pinned Anki backend. No account, API key or paid service is needed. The cards build directly from the tracked JSON records. The build also renders the checked-in [gallery cover masters](docs/build.md#gallery-covers).
 
 ```sh
 python3.14 -m venv /path/outside-the-repo/anki-venv
