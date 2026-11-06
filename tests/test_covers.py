@@ -3,12 +3,33 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
 CHECK = ROOT / "scripts/checks/verify-covers.py"
+sys.path.insert(0, str(ROOT / "scripts"))
+from covers import render_covers
+
+
+class CoverRenderer(unittest.TestCase):
+    def test_incompatible_master_aspect_ratio_leaves_no_png(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            masters = root / "masters"
+            masters.mkdir()
+            (masters / "rv-capitals-cover-dark-1.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg" '
+                'width="100" height="100" viewBox="0 0 100 100">'
+                '<rect width="100" height="100" fill="#211e18"/></svg>'
+            )
+            output = root / "output"
+            with patch("covers.MASTERS", masters):
+                with self.assertRaisesRegex(ValueError, "3:2 viewport"):
+                    render_covers(output)
+            self.assertEqual(list(output.glob("*.png")), [])
 
 
 class CoverCheck(unittest.TestCase):

@@ -39,7 +39,8 @@ for artwork shared by all languages, or `rv-capitals-<en|fr>-cover-<light|dark>-
 for artwork with words. Use lowercase and start numbering at 1. A localized
 cover needs a master for every shipped language at that number and appearance.
 Both appearances currently use the approved charcoal artwork. Lettering is outlined
-so the pinned renderer does not need system fonts.
+so the pinned renderer does not need system fonts. Masters must have a 3:2
+viewport; the renderer rejects any other ratio before writing the final PNGs.
 
 The package builder renders all masters beside the package and sidecar as
 2,010 × 1,340 PNGs. CI checks filenames, dimensions, both appearances for
@@ -55,6 +56,19 @@ Original vector compositions © Simon Pinkas, CC BY 4.0. The landmark paths
 were drawn using the references below. The question is the published
 Australia → Canberra gallery sample. Its SF and SF Mono letter shapes are
 outlined, with no font files included.
+
+The outlined lettering derives from Apple's system font files below, identified
+by their embedded version and SHA-256. Font software remains © Apple Inc. under
+its own terms, separate from the composition's CC BY 4.0 attribution. The
+`SFNS.ttf` license record refers to the applicable OS software license; the
+`SFNSMono.ttf` record contains the Apple SF Mono license. See [Apple's font
+information and licensing](https://developer.apple.com/fonts/). These font files
+are authoring provenance only; rebuilding uses the tracked paths.
+
+| Authoring source | Embedded version | SHA-256 |
+|---|---|---|
+| macOS `/System/Library/Fonts/SFNS.ttf` | `22.0d5e1` | `44890958f3e0b997028121ed7c7a789f3f5cce227c7a93ce8f86ec0db26da571` |
+| macOS `/System/Library/Fonts/SFNSMono.ttf` | `22.0d3e3` | `fc99d1608690ab5f2e1f78af9fbd4ef9ffef61f3eef36ceeea3ac3c844e652d4` |
 
 | Master (both appearances have the same SHA-256) | Reference | SHA-256 |
 |---|---|---|

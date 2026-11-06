@@ -1,12 +1,14 @@
 """Render the gallery cover masters into an external build directory."""
 
 import argparse
+from io import BytesIO
 import re
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from xml.etree import ElementTree
 
 import resvg_py
+from PIL import Image
 
 from source_data import ROOT, read
 
@@ -43,12 +45,14 @@ def render_covers(output):
                     if key.rsplit("}", 1)[-1] == "href" and not value.startswith(("#", "data:")):
                         raise ValueError(f"External resource in {master.name}: {value}")
             target = Path(temporary) / master.with_suffix(".png").name
-            target.write_bytes(
-                resvg_py.svg_to_bytes(
-                    svg_string=svg, width=COVER_SIZE[0], height=COVER_SIZE[1],
-                    skip_system_fonts=True,
-                )
+            png = resvg_py.svg_to_bytes(
+                svg_string=svg, width=COVER_SIZE[0], height=COVER_SIZE[1],
+                skip_system_fonts=True,
             )
+            with Image.open(BytesIO(png)) as image:
+                if image.size != COVER_SIZE:
+                    raise ValueError(f"{master.name} must have a 3:2 viewport")
+            target.write_bytes(png)
             rendered.append(target)
         for target in rendered:
             target.replace(output / target.name)
