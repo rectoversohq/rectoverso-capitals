@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-11-05 — Publication preparation for 0.1.0-rc.3
+
+The owner asked for this preparation before releasing 0.1.0-rc.3. `rectoverso.json`'s version, tag and release address, the READMEs (English and French) and the review page point to 0.1.0-rc.3, and the update guide names 0.1.0-rc.2 as the published predecessor to test from. `contentModifiedAt` moves to a time after the France change, the last content change. The Anki deck descriptions already describe the published deck and are unchanged.
+
+## 2026-11-05 — The French docs (0.1.0-rc.3)
+
+The French README, the review page's French section and the French quotations of this page take RectoVerso's French typography, as the notes did in 0.1.0-rc.2 and as Maps 0.3.0-rc.3 did for its docs (the owner, for Maps: "Maps' French docs and READMEs are fixed in rc.3"): a narrow no-break space (U+202F) before « ; » and « : » and inside « », and « deck » for « jeu » (« Ce deck ne contient que du texte », « dépôt du deck »). The apostrophes were already curly. Typography only: no card, package or meaning changes.
+
+## 2026-11-05 — France in Europe only (0.1.0-rc.3)
+
+The owner (2026-11-05), for Pro Geography 0.2.0-rc.2: "France: Europe only in Geography, matching Maps' core France. Drop North America from France's continents." Maps 0.3.0-rc.3 gives France Europe and asks Clipperton, which has no ISO 3166-1 code of its own, as a question of its own (North America). Capitals 0.1.0-rc.2 gave France Europe + North America, for Clipperton, and so disagreed with Maps; the owner asked for Capitals to follow in 0.1.0-rc.3 ([#5](https://github.com/rectoversohq/rectoverso-capitals/issues/5)).
+
+- **France** (`FRA`) is Europe only in `source/continents.json` and `source/places.json`. UN M49 and GeoNames classify France, as a whole, in Europe. Clipperton, a French atoll in the North Pacific, adds no continent: an exception to whole-place membership, said in the convention, the `scope` note and [coverage](coverage.md). The island rule no longer names Clipperton.
+- France's two notes per language (`rv-capitals-en-fra-place-capital-paris` and `rv-capitals-en-fra-capital-place-paris`, and their French twins) show **Continent** Europe, and their search metadata no longer lists North America or Amérique du Nord. No other note's content changes, and no identity changes.
+- Every other place's continents agree with Maps 0.3.0-rc.3's `continents.json`; France was the one difference.
+
+`contentModifiedAt` moves to this revision, so Anki's default import applies the new text.
+
 ## 2026-11-05 — The Canary Islands in Europe; French typography (0.1.0-rc.2)
 
 The owner's answers on this rc.2 (2026-11-05):
@@ -24,7 +42,7 @@ The owner asked for this preparation before releasing 0.1.0-rc.2. The Anki deck 
 
 ## 2026-11-04 — Gallery copy
 
-The owner approved the gallery copy: the headline and description in `rectoverso.json`, with "Where a place has more than one capital" / « Quand un lieu a plusieurs capitales » rather than "a country", so the description takes no position on a place's status.
+The owner approved the gallery copy: the headline and description in `rectoverso.json`, with "Where a place has more than one capital" / « Quand un lieu a plusieurs capitales » rather than "a country", so the description takes no position on a place's status.
 
 ## 2026-11-02 — Owner phone feedback
 
@@ -43,3 +61,7 @@ RectoVerso's gallery reads every deck from one metadata layout ([#690](https://g
 ## 2026-11-06 — One complete AGENTS.md for every agent, by kind of work
 
 The owner: a single `AGENTS.md`, read by any agent (Codex, Claude Code or another) and complete on its own (it restates RectoVerso's deck rules, metadata contract, cover specification and French beside this repository's own; where they disagree, RectoVerso's pages win), organized around the three kinds of work done here: deck authoring (the content), contract honoring (what RectoVerso's gallery and Anki read: rectoverso.json, identities, packages, releases) and cover making (the gallery's pictures). It points to RectoVerso's `agents/decks.md` for the rules every gallery deck shares, and keeps this repository's own. The `CLAUDE.md` first proposed here ([#7](https://github.com/rectoversohq/rectoverso-capitals/pull/7)) isn't kept.
+
+## 2026-11-06 — 1.0.0, the first release learners get
+
+The owner (2026-11-06): the deck's first release in RectoVerso's Deck gallery is 1.0.0, after the owner's review, its tag and release on the owner's go; the 0.1.0-rc.3 prepared here becomes it. It carries this branch's France in Europe only and French docs, lists the gallery covers in `rectoverso.json` (`rv-capitals-cover-1.png` and `rv-capitals-cover-3.png` in every language and both appearances, the question cover `rv-capitals-<language>-cover-2.png` in its own language), adds `whatsNew` in both languages (the owner's copy to confirm), and sets `status` to `release`. Its predecessor for the update test stays 0.1.0-rc.2, the last published prerelease. `contentModifiedAt` stays 2026-11-05T10:23:00Z: the cards haven't changed since.
