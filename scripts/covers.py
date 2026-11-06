@@ -21,8 +21,8 @@ def cover_pattern(meta, extension):
     prefix = re.escape(meta["guidPrefix"])
     languages = "|".join(map(re.escape, meta["languages"]))
     return re.compile(
-        rf"{prefix}(?:-(?P<language>{languages}))?-cover-"
-        rf"(?P<appearance>light|dark)-(?P<number>[1-9][0-9]*){re.escape(extension)}"
+        rf"{prefix}(?:-(?P<language>{languages}))?-cover"
+        rf"(?:-(?P<appearance>light|dark))?-(?P<number>[1-9][0-9]*){re.escape(extension)}"
     )
 
 

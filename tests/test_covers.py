@@ -20,7 +20,7 @@ class CoverRenderer(unittest.TestCase):
             root = Path(temporary)
             masters = root / "masters"
             masters.mkdir()
-            (masters / "rv-capitals-cover-dark-1.svg").write_text(
+            (masters / "rv-capitals-cover-1.svg").write_text(
                 '<svg xmlns="http://www.w3.org/2000/svg" '
                 'width="100" height="100" viewBox="0 0 100 100">'
                 '<rect width="100" height="100" fill="#211e18"/></svg>'
@@ -37,8 +37,7 @@ class CoverCheck(unittest.TestCase):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
         self.output = Path(temporary.name)
-        self.add_cover("rv-capitals-cover-light-1.png")
-        self.add_cover("rv-capitals-cover-dark-1.png")
+        self.add_cover("rv-capitals-cover-1.png")
 
     def add_cover(self, name, size=(2010, 1340), mark=None):
         with Image.new("RGB", size, "#211e18") as image:
@@ -65,7 +64,7 @@ class CoverCheck(unittest.TestCase):
         self.assertIn(message, result.stderr)
 
     def test_wrong_dimensions_are_rejected(self):
-        self.add_cover("rv-capitals-cover-light-1.png", size=(2010, 1339))
+        self.add_cover("rv-capitals-cover-1.png", size=(2010, 1339))
         self.assert_rejected("must be a 2010 × 1340 PNG")
 
     def test_invalid_names_are_rejected(self):
@@ -81,7 +80,8 @@ class CoverCheck(unittest.TestCase):
                 (self.output / name).unlink()
 
     def test_missing_appearance_is_rejected(self):
-        (self.output / "rv-capitals-cover-dark-1.png").unlink()
+        (self.output / "rv-capitals-cover-1.png").unlink()
+        self.add_cover("rv-capitals-cover-light-1.png")
         self.assert_rejected("en missing cover appearances: dark")
 
     def test_worded_cover_requires_every_language_at_the_same_number_and_appearance(self):
@@ -101,16 +101,54 @@ class CoverCheck(unittest.TestCase):
 
     def test_artwork_at_the_inclusive_corner_boundary_is_rejected(self):
         self.add_cover(
-            "rv-capitals-cover-dark-1.png", mark=((1608, 335), (237, 230, 216))
+            "rv-capitals-cover-1.png", mark=((1608, 335), (237, 230, 216))
         )
         self.assert_rejected("has artwork in the language-pill corner")
 
     def test_minor_background_variation_and_art_outside_the_corner_are_allowed(self):
         self.add_cover(
-            "rv-capitals-cover-light-1.png", mark=((1608, 335), (37, 26, 27))
+            "rv-capitals-cover-4.png", mark=((1608, 335), (37, 26, 27))
         )
         self.add_cover(
-            "rv-capitals-cover-dark-1.png", mark=((1608, 336), (237, 230, 216))
+            "rv-capitals-cover-1.png", mark=((1608, 336), (237, 230, 216))
         )
         result = self.check()
         self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_explicit_appearances_remain_supported(self):
+        (self.output / "rv-capitals-cover-1.png").unlink()
+        for appearance in ("light", "dark"):
+            self.add_cover(f"rv-capitals-cover-{appearance}-1.png")
+        result = self.check()
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_localized_shared_appearance_covers_supply_both_modes(self):
+        (self.output / "rv-capitals-cover-1.png").unlink()
+        for language in ("en", "fr"):
+            self.add_cover(f"rv-capitals-{language}-cover-2.png")
+        result = self.check()
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_shared_appearance_worded_cover_requires_matching_localization(self):
+        self.add_cover("rv-capitals-en-cover-2.png")
+        for appearance in ("light", "dark"):
+            self.add_cover(f"rv-capitals-fr-cover-{appearance}-2.png")
+        self.assert_rejected("Worded cover None-2 missing languages: fr")
+
+    def test_mixed_shared_and_explicit_appearance_is_rejected(self):
+        self.add_cover("rv-capitals-cover-light-1.png")
+        self.assert_rejected("Ambiguous appearance scope")
+
+    def test_mixed_appearances_in_one_localized_language_are_rejected(self):
+        for language in ("en", "fr"):
+            self.add_cover(f"rv-capitals-{language}-cover-2.png")
+        self.add_cover("rv-capitals-en-cover-dark-2.png")
+        self.assert_rejected("Ambiguous appearance scope")
+
+    def test_mixed_shared_and_localized_number_is_rejected(self):
+        for appearance in ("", "-light", "-dark"):
+            name = f"rv-capitals-en-cover{appearance}-1.png"
+            with self.subTest(name=name):
+                self.add_cover(name)
+                self.assert_rejected("Ambiguous language scope")
+                (self.output / name).unlink()

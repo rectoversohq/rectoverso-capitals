@@ -23,6 +23,8 @@ def verify(output):
     pattern = cover_pattern(meta, ".png")
     coverage = {language: set() for language in languages}
     worded = {}
+    language_scopes = {}
+    appearance_scopes = {}
     digests = {}
     for path in sorted(output.iterdir()):
         if path.suffix.lower() != ".png":
@@ -43,12 +45,20 @@ def verify(output):
                 raise ValueError(f"{path.name} has artwork in the language-pill corner")
 
         digests[path.name] = sha256(path.read_bytes()).hexdigest()
-        if language is None:
-            for appearances in coverage.values():
-                appearances.add(appearance)
-        else:
-            coverage[language].add(appearance)
+        language_scopes.setdefault(number, set()).add(language)
+        appearance_scopes.setdefault((language, number), set()).add(appearance)
+        covered_appearances = {"light", "dark"} if appearance is None else {appearance}
+        for covered_language in languages if language is None else {language}:
+            coverage[covered_language].update(covered_appearances)
+        if language is not None:
             worded.setdefault((appearance, number), set()).add(language)
+
+    for number, scopes in language_scopes.items():
+        if None in scopes and len(scopes) > 1:
+            raise ValueError(f"Ambiguous language scope for cover {number}")
+    for (language, number), scopes in appearance_scopes.items():
+        if None in scopes and len(scopes) > 1:
+            raise ValueError(f"Ambiguous appearance scope for {language or 'all languages'} cover {number}")
 
     for (appearance, number), present in worded.items():
         if missing := languages - present:
