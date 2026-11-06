@@ -25,7 +25,7 @@ La [revue des sources](docs/review.md) précise l’état des contrôles et les 
 
 ## Construire pour Anki
 
-Utiliser Python 3.14 et la version d’Anki fixée dans `requirements.txt`. Aucun compte ni service payant n’est nécessaire. Ce deck ne contient que du texte : les données JSON suivies dans Git suffisent, sans outil graphique ni téléchargement d’images.
+Utiliser Python 3.14 et la version d’Anki fixée dans `requirements.txt`. Aucun compte ni service payant n’est nécessaire. Les cartes sont construites à partir des données JSON suivies dans Git. La commande génère aussi les [couvertures de la galerie](docs/build.md#gallery-covers) à partir des fichiers SVG.
 
 ```sh
 python3.14 -m venv /chemin/hors-du-depot/anki-venv
