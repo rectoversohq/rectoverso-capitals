@@ -24,7 +24,7 @@
 
 ## This deck's covers
 - **Covers exist** (artwork/covers/): `rv-capitals-cover-1` (landmarks of capitals), `rv-capitals-en-cover-2` and `rv-capitals-fr-cover-2` (the sample question, Australia → Canberra, in each language), `rv-capitals-cover-3` (more landmarks), the same picture in light and dark mode. Their sources are in docs/build.md; the lettering is outlined from Apple's SF fonts, kept for now by the owner's call (2026-11-06).
-- Not yet listed in rectoverso.json's `covers`: that comes with the next release (1.0.0), with the owner's go.
+- **Listed** in rectoverso.json's `covers` since 1.0.0, and attached to its release.
 - **PNG** for drawn art (a JPEG only for a photograph); small files (they ship inside the app's download: aim under 400 KB).
 - **Accurate:** whatever real place, flag, element, name or shape a cover shows is right, checked against the deck's own sources.
 - **Masters** in artwork/covers/, SVG, named as their PNGs (`.svg`), with lettering outlined (or a pinned, embedded font) so every render is identical; no external resource.
